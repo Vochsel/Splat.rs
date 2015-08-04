@@ -1,0 +1,11 @@
+.text {
+	margin: 0;
+}
+
+.f_opensans { font-family: 'Open Sans', sans-serif; }
+
+.thin		{ font-weight: 300; }
+.thick 		{ font-weight: 800; }
+.regular	{ font-weight: 400; }
+
+.large 		{ font-size: 4vw; 	}

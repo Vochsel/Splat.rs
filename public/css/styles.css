@@ -1,0 +1,14 @@
+body {
+	margin: 0;
+}
+
+#container {
+	text-align: center;
+}
+
+#game { 
+	border: solid thin gray;
+	padding: 2vw;
+	margin: 2vw;
+	background-color: #EEEEEE;
+}
