@@ -8,18 +8,25 @@
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 		<link rel="stylesheet" type="text/css" href="css/text.css">
 
-		<!-- External JS -->
 
 	</head>
 
 	<body>
 		<div id='container'>
 			<p class='text f_opensans thin large'>Splat.rs</p>
-			<div id='game'>
-				<canvas id='foreground_game' width='1280px' height='720px'></canvas>
-				<canvas id='background_game' width='1280px' height='720px'></canvas>
+			<div id='game_container'>
+				<div id='game'>
+					<canvas class='game_canvas' id='foreground_game' width='480px' height='360px'></canvas>
+					<canvas class='game_canvas' id='background_game' width='480px' height='360px'></canvas>
+				</div>
 			</div>
 		</div>
+
+		<!-- External JS -->
+		<script type="text/javascript" src='js/game.js'></script>
+		<script type="text/javascript" src='js/display.js'></script>
+		<script type="text/javascript" src='js/particle.js'></script>
+
 	</body>
 
 </html>

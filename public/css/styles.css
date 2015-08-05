@@ -6,9 +6,35 @@ body {
 	text-align: center;
 }
 
-#game { 
+#game_container { 
 	border: solid thin gray;
 	padding: 2vw;
 	margin: 2vw;
 	background-color: #EEEEEE;
+	position: relative;
+}
+
+.game_canvas {
+	border: dashed thin black;
+
+}
+
+#game {
+	position: relative;
+	width: 480px;
+	height: 360px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#background_game {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#foreground_game {
+	position: absolute;
+	left: 0;
+	top: 0;
 }
