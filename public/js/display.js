@@ -9,3 +9,12 @@ function loadCanvas(id) {
 	};
 
 }
+
+function clearCanvas(c) {
+	c.ctx.clearRect(0, 0, c.w, c.h);
+}
+
+function fillCanvas(c, col) {
+	c.ctx.fillStyle = col;
+	c.ctx.fillRect(0, 0, c.w, c.h)
+}
