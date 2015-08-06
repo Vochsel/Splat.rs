@@ -29,6 +29,7 @@ function updateParticles(dt) {
         p.pos.y += Math.sin(p.angle) * 4 + Math.random() * 2 - Math.random() * 2;
         //p.pos.y += Math.exp(dt) * 2.5;
         //p.col = 'rgb(' + String(ageOffset * 255) + ',100, 100)';
+        p.col.r = p.age * 10;
 		p.rad = (ageOffset + 0.2) * 10;
 		p.age += dt;
 		
@@ -39,7 +40,7 @@ function renderParticles(ctx) {
 	local_particles.forEach(function(p) {
 		//Draw particle
 		ctx.save();
-		ctx.fillStyle = p.col;
+		ctx.fillStyle = p.col.rgb();
 		ctx.translate(p.pos.x, p.pos.y);
 		//ctx.fillRect(0, 0, 100, 100);
 		ctx.beginPath();

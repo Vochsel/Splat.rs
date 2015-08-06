@@ -17,7 +17,7 @@ function updatePlayer(player) {
 function renderPlayer(ctx, p) {
 	ctx.save();
 
-	ctx.fillStyle = p.col;
+	ctx.fillStyle = p.col.rgb();
 
 	ctx.translate(p.pos.x, p.pos.y);
 	ctx.fillRect(	-p.rad, 

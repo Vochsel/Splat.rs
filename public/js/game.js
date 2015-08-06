@@ -2,16 +2,9 @@
 var foreground = loadCanvas("foreground_game");
 var background = loadCanvas("background_game");
 
-var player = definePlayer({x:100, y:100}, 20, '#99CCDD');
+var player = definePlayer(new Vector2(200, 200), 20, new Color(122, 233, 64));
 
-var particle = new Particle({x:0, y:0}, '#99CCDD', 10, 100);
 
-var position = new Vector2(10, 20);
-var velocity = new Vector2(20, 10);
-
-position.add(velocity);
-	position.print();
-	velocity.print();
 
 run();
 function run() {
@@ -23,7 +16,7 @@ function run() {
 //Game Functions
 function update() {
 	clearCanvas(foreground);
-	fillCanvas(background, 'rgba(255, 255, 255, 1)');
+	//fillCanvas(background, 'rgba(255, 255, 255, 1)');
 	//console.log(player.pos);
 	updateParticles(1);
 
@@ -50,6 +43,13 @@ foreground.c.onmousedown = function(e) {
 
 function splatter() {
 	for(var i = 0; i < 15; i++) {
-		spawnParticle(new Particle({x:player.pos.x, y:player.pos.y}, {x:randomDir(), y: randomDir()}, 'rgb(200, 100, 100)', 10, randomRange(5, 20), i * randomRange(2, 6)) );
+		spawnParticle(new Particle (	{x:player.pos.x, y:player.pos.y}, 
+										{x:randomDir(), y: randomDir()}, 
+										new Color(200, 100, 100), 
+										10, 
+										randomRange(5, 20), 
+										i * randomRange(2, 6)
+									) 
+	);
 	}
 }
