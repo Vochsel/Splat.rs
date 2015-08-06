@@ -6,6 +6,13 @@ var player = definePlayer({x:100, y:100}, 20, '#99CCDD');
 
 var particle = new Particle({x:0, y:0}, '#99CCDD', 10, 100);
 
+var position = new Vector2(10, 20);
+var velocity = new Vector2(20, 10);
+
+position.add(velocity);
+	position.print();
+	velocity.print();
+
 run();
 function run() {
 	update();
@@ -17,8 +24,9 @@ function run() {
 function update() {
 	clearCanvas(foreground);
 	fillCanvas(background, 'rgba(255, 255, 255, 1)');
-	console.log(player.pos);
+	//console.log(player.pos);
 	updateParticles(1);
+
 }
 
 function render() {
@@ -36,7 +44,7 @@ foreground.c.onmousemove = function(e) {
 foreground.c.onmousedown = function(e) {
 	console.log("Mouse clicked!");
 	
-	console.log(local_particles.size);
+	//console.log(local_particles.size);
 	//movePlayer(player, {x:e.layerX, y:e.layerY});
 };
 

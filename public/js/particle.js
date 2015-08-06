@@ -27,7 +27,7 @@ function updateParticles(dt) {
 
 		p.pos.x += Math.cos(p.angle) * 4 + Math.random() * 2 - Math.random() * 2;
         p.pos.y += Math.sin(p.angle) * 4 + Math.random() * 2 - Math.random() * 2;
-        p.pos.y += Math.exp(dt) * 2.5;
+        //p.pos.y += Math.exp(dt) * 2.5;
         //p.col = 'rgb(' + String(ageOffset * 255) + ',100, 100)';
 		p.rad = (ageOffset + 0.2) * 10;
 		p.age += dt;
